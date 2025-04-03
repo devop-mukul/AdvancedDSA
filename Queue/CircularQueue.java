@@ -1,10 +1,13 @@
+package Queue;
+/* https://leetcode.com/problems/design-circular-queue/ */
+
 public class CircularQueue {
     private int front;
     private int rear;
     private int[] arr;
     private int size;
 
-    public MyCircularQueue(int k) {
+    public CircularQueue(int k) {
         this.size = k;
         this.arr = new int[size];
         this.front = -1;
