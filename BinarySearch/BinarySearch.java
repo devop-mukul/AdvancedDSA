@@ -1,3 +1,4 @@
+package AdvancedDSA.BinarySearch;
 import java.util.*;
 
 public class BinarySearch {
