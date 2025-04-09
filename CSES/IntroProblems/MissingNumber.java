@@ -7,6 +7,7 @@ public class MissingNumber {
     public static void main(String arg[]) {
         Scanner x = new Scanner(System.in);
         long n1 = x.nextLong();
+        x.close();
         int n = (int) n1;
         int ar[] = new int[n - 1];
         long sum = 0L;
