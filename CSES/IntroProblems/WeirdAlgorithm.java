@@ -7,6 +7,7 @@ public class WeirdAlgorithm {
     public static void main(String[] args) {
         Scanner x = new Scanner(System.in);   
         long n = x.nextLong();
+        x.close(); 
         while(n != 1) {
             System.out.print(n + " ");
             if((n & 1) == 0) {

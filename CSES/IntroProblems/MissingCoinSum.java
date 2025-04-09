@@ -2,13 +2,14 @@ import java.util.*;
 
 public class MissingCoinSum {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner x = new Scanner(System.in);
 
-        int n = scanner.nextInt();
+        int n = x.nextInt();
         long[] coins = new long[n];
-        for (int i = 0; i < n; i++) {
-            coins[i] = scanner.nextLong();
-        }
+        for (int i = 0; i < n; i++) 
+            coins[i] = x.nextLong();
+        
+        x.close();
 
         Arrays.sort(coins);
 

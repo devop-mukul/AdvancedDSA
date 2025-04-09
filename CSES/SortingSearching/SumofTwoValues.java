@@ -13,6 +13,7 @@ public class SumofTwoValues {
         for(int i = 0; i < n; i++) {
             ar[i] = x.nextInt();
         }
+        x.close();
         
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
