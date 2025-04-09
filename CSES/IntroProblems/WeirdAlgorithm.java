@@ -1,6 +1,5 @@
 // Problem Link - https://cses.fi/problemset/result/12561525/
 
-package CSES;
 
 import java.util.Scanner;
 
