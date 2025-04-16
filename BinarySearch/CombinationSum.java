@@ -1,4 +1,4 @@
-package AdvancedDSA.BinarySearch;
+package BinarySearch;
 
 public class CombinationSum {
     
