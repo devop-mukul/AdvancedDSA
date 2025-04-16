@@ -5,24 +5,22 @@ package DynamicProgramming;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class DynamicProgramming {
+class check {
     static int count = 0;
     public static void main(String[] args) {
 
         Scanner x = new Scanner(System.in);
         int n = x.nextInt();
         x.close();
-        int[] dP = new int[n + 1];
-        Arrays.fill(dP, -1);
 
-        System.out.print("Total Combinations : "+ Combinations(n, dP));
+        System.out.print("Total Combinations : "+ Combinations(n));
         System.out.println();
         System.out.print("Function calls : "+ count);
     }
-    public static int Combinations(int n, int[] dP) {
+    public static int Combinations(int n) {
         count++;
         if (n == 0) return 1;
-        if(dP[n] != -1) return dP[n];
-        return Combinations(n / 2, dP) + Combinations(n / 3, dP);
+        //if(dP[n] != -1) return dP[n];
+        return Combinations(n / 2) + Combinations(n / 3);
     }
 }
