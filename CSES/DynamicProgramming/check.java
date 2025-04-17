@@ -1,26 +1,35 @@
-//Problem Link - https://cses.fi/problemset/task/1633
-
 package DynamicProgramming;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Scanner;
 
-class check {
-    static int count = 0;
+public class check {
     public static void main(String[] args) {
-
+        // System.out.print("\033[H\033[2J");
+        // System.out.flush();
         Scanner x = new Scanner(System.in);
         int n = x.nextInt();
         x.close();
+        System.out.println(fxn(n));
 
-        System.out.print("Total Combinations : "+ Combinations(n));
-        System.out.println();
-        System.out.print("Function calls : "+ count);
     }
-    public static int Combinations(int n) {
-        count++;
-        if (n == 0) return 1;
-        //if(dP[n] != -1) return dP[n];
-        return Combinations(n / 2) + Combinations(n / 3);
+    public static long fxn(int x) {
+        long [] dP = new long[x];
+        for(int i = 0; i < dP.length; i++) {
+            dP[i] = -1;
+        }
+
+        int m = 10_00_00_00_07;
+        
+        if(x == 0) return 1;
+        long s = 0;
+        if(dP[x] != -1) return dP[x] % m;
+        for(int i = 1; i <= 6; i++) {
+            if(x - i >= 0) {
+                s += fxn(x - i);
+            }
+        }
+        dP[x] = s;
+        return dP[x] % m;
     }
 }
