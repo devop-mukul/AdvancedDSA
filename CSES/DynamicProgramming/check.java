@@ -1,6 +1,5 @@
 package DynamicProgramming;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class check {

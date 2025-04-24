@@ -8,6 +8,8 @@ public class IsSubsequence392 {
         s = x.nextLine();
         System.out.println("Enter the second string: ");
         t = x.nextLine();
+
+        x.close();
         System.out.println("Is the first string a subsequence of the second string? " + isSubsequence(s, t));
 
     }

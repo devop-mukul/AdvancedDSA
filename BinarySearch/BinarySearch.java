@@ -11,7 +11,8 @@ public class BinarySearch {
         Scanner x = new Scanner(System.in);
         System.out.print("Enter number: ");
         int find = x.nextInt();
-
+        x.close();
+        
         boolean found = false;
 
         while (f <= l) { 
