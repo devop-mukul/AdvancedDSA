@@ -38,7 +38,7 @@ public class MinDistance72Tabulation {
 
     // Main function to test the solution
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        MinDistance72Tabulation solution = new MinDistance72Tabulation();
 
         // Test with example inputs
         String word1 = "horse";

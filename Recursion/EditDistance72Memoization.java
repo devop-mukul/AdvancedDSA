@@ -3,7 +3,7 @@ package Recursion;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class EditDistance72 {
+class EditDistance72Memoization {
 
     static int[][] dp; // Memoization table
 
@@ -42,7 +42,7 @@ class EditDistance72 {
     // Main function to test the solution
     public static void main(String[] args) {
         Scanner x = new Scanner(System.in);
-        EditDistance72 solution = new EditDistance72();
+        EditDistance72Memoization solution = new EditDistance72Memoization();
         String word1 = x.nextLine(); // Read first word from input
         String word2 = x.nextLine(); // Read second word from input 
 
