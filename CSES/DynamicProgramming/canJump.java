@@ -1,6 +1,4 @@
 
-import java.util.Arrays;
-
 public class canJump {
     // public boolean canJump(int[] nums) {
     //     int n = nums.length;
