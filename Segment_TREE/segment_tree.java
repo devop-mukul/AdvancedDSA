@@ -5,6 +5,25 @@ class segment_tree {
     static int[] segMin;  
     static int[] segMax;  
 
+    public static void main(String[] args) {
+        arr = new int[]{10, 20, 30, 40, 50};
+        int n = arr.length;
+
+        segMin = new int[4 * n];
+        segMax = new int[4 * n];
+        Arrays.fill(segMin, Integer.MAX_VALUE);
+        Arrays.fill(segMax, Integer.MIN_VALUE);
+
+        segment_tree tree = new segment_tree();
+        tree.buildMinTree(0, n - 1, 0);
+        tree.buildMaxTree(0, n - 1, 0);
+
+        System.out.println("Min Segment Tree: " + Arrays.toString(segMin));
+        System.out.println("Max Segment Tree: " + Arrays.toString(segMax));
+        System.out.println("Minimum in range [1, 3]: " + getMin(0, n - 1, 0, 0, 2));
+        System.out.println("Maximum in range [2, 4]: " + getMax(0, n - 1, 0, 1, 3));
+    }
+    
     void buildMinTree(int s, int e, int idx) {
         if (s == e) {
             segMin[idx] = arr[s];
@@ -64,23 +83,5 @@ class segment_tree {
             update(2 * idx + 2, mid + 1, end, pos, value);
 
         return arr[idx] = Math.min(arr[2 * idx + 1], arr[2 * idx + 2]);
-    }
-    public static void main(String[] args) {
-        arr = new int[]{10, 20, 30, 40, 50};
-        int n = arr.length;
-
-        segMin = new int[4 * n];
-        segMax = new int[4 * n];
-        Arrays.fill(segMin, Integer.MAX_VALUE);
-        Arrays.fill(segMax, Integer.MIN_VALUE);
-
-        segment_tree tree = new segment_tree();
-        tree.buildMinTree(0, n - 1, 0);
-        tree.buildMaxTree(0, n - 1, 0);
-
-        System.out.println("Min Segment Tree: " + Arrays.toString(segMin));
-        System.out.println("Max Segment Tree: " + Arrays.toString(segMax));
-        System.out.println("Minimum in range [1, 3]: " + getMin(0, n - 1, 0, 0, 2));
-        System.out.println("Maximum in range [2, 4]: " + getMax(0, n - 1, 0, 1, 3));
     }
 }
